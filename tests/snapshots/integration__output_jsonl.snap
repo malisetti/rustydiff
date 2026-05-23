@@ -1,0 +1,5 @@
+---
+source: tests/integration.rs
+expression: "String::from_utf8_lossy(&jsonl)"
+---
+{"changed_fields":["l"],"kind":"modified","left":{"fields":{"id":"1","l":"info"},"raw":"{\"id\":\"1\",\"l\":\"info\"}"},"right":{"fields":{"id":"1","l":"error"},"raw":"{\"id\":\"1\",\"l\":\"error\"}"}}

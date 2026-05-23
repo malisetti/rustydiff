@@ -1,0 +1,6 @@
+---
+source: tests/integration.rs
+assertion_line: 51
+expression: "String::from_utf8_lossy(&jsonl)"
+---
+
