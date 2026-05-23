@@ -7,8 +7,12 @@ use crate::record::{changed_fields, record_key, Record};
 #[derive(Debug, Clone, PartialEq, Eq, Serialize, Deserialize)]
 #[serde(tag = "kind", rename_all = "snake_case")]
 pub enum DiffChange {
-    OnlyInLeft { record: Record },
-    OnlyInRight { record: Record },
+    OnlyInLeft {
+        record: Record,
+    },
+    OnlyInRight {
+        record: Record,
+    },
     Modified {
         left: Record,
         right: Record,
@@ -37,11 +41,7 @@ where
     }
 
     let mut changes = Vec::new();
-    let mut all_keys: Vec<String> = left_map
-        .keys()
-        .chain(right_map.keys())
-        .cloned()
-        .collect();
+    let mut all_keys: Vec<String> = left_map.keys().chain(right_map.keys()).cloned().collect();
     all_keys.sort();
     all_keys.dedup();
 
