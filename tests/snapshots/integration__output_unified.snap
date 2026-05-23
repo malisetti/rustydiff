@@ -1,0 +1,7 @@
+---
+source: tests/integration.rs
+expression: "String::from_utf8_lossy(&unified)"
+---
+@@ modified @@
+-l=info
++l=error

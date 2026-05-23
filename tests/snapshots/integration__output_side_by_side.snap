@@ -1,0 +1,6 @@
+---
+source: tests/integration.rs
+expression: "String::from_utf8_lossy(&sxs)"
+---
+--- modified ---
+   l: info | error

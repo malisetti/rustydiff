@@ -1,0 +1,26 @@
+---
+source: tests/integration.rs
+expression: changes
+---
+[
+  {
+    "kind": "only_in_left",
+    "record": {
+      "fields": {
+        "id": "1",
+        "l": "info"
+      },
+      "raw": "{\"id\":\"1\",\"l\":\"info\"}"
+    }
+  },
+  {
+    "kind": "only_in_right",
+    "record": {
+      "fields": {
+        "id": "2",
+        "l": "warn"
+      },
+      "raw": "{\"id\":\"2\",\"l\":\"warn\"}"
+    }
+  }
+]
